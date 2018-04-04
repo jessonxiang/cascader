@@ -7,6 +7,6 @@
 	<packaging>pom</packaging>
 
 	<modules>
-    	<module>com-bh-cascader-addres</module>
-  </modules>
+    	<module>com.bh.cascader.address</module>
+  	</modules>
 </project>
