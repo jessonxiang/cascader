@@ -1,6 +1,5 @@
-package com.bh.cascader.core.address.dao.domian;
+package com.bh.cascader.core.address.dao.domain;
 
-import com.sun.javafx.beans.IDProperty;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,6 +1,6 @@
 package com.bh.cascader.core.address.dao.dao;
 
-import com.bh.cascader.core.address.dao.domian.CityDO;
+import com.bh.cascader.core.address.dao.domain.CityDO;
 import tk.mybatis.mapper.common.Mapper;
 
 /**

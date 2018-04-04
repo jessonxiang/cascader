@@ -1,7 +1,7 @@
 package com.bh.cascader.core.address.dao.server.impl;
 
 import com.bh.cascader.core.address.dao.dao.ProvinceDAO;
-import com.bh.cascader.core.address.dao.domian.ProvinceDO;
+import com.bh.cascader.core.address.dao.domain.ProvinceDO;
 import com.bh.cascader.core.address.dao.server.ProvinceService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

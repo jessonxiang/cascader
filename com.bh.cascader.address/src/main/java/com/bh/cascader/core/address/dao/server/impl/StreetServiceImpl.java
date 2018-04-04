@@ -1,10 +1,7 @@
 package com.bh.cascader.core.address.dao.server.impl;
 
-import com.bh.cascader.core.address.dao.dao.AreaDAO;
 import com.bh.cascader.core.address.dao.dao.StreetDAO;
-import com.bh.cascader.core.address.dao.domian.AreaDO;
-import com.bh.cascader.core.address.dao.domian.StreetDO;
-import com.bh.cascader.core.address.dao.server.AreaService;
+import com.bh.cascader.core.address.dao.domain.StreetDO;
 import com.bh.cascader.core.address.dao.server.StreetService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

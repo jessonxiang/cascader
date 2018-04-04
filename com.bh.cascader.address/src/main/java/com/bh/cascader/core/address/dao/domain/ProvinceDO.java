@@ -1,4 +1,4 @@
-package com.bh.cascader.core.address.dao.domian;
+package com.bh.cascader.core.address.dao.domain;
 
 import lombok.Getter;
 import lombok.Setter;

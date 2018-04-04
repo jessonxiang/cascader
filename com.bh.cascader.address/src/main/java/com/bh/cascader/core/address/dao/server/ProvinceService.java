@@ -1,6 +1,6 @@
 package com.bh.cascader.core.address.dao.server;
 
-import com.bh.cascader.core.address.dao.domian.ProvinceDO;
+import com.bh.cascader.core.address.dao.domain.ProvinceDO;
 import org.springframework.cache.annotation.Cacheable;
 
 import java.util.List;
