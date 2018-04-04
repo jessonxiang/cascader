@@ -3,4 +3,6 @@
 默认请求数据路径为 {project}/ws/cascader/address/getData/{code}<br>
 code 为null 查询全国省份数据<br>
 示例 {project}/ws/cascader/address/getData/43<br>
-查询湖南省下的所有地址市
+查询湖南省下的所有地址市<br>
+数据库
+     数据库文件为mysql 数据库文件 数据更新时间  2018-04-04
