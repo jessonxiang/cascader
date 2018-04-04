@@ -37,7 +37,7 @@ public class AddressRest {
     @Resource(name="villageServiceImpl")
     private VillageService villageService;
 
-    @GetMapping("/getAllChildren/{code}")
+    @GetMapping("/getData/{code}")
     public List getAllChildren(@PathVariable("code") String code){
 //        log.info("AddressRest > getAllChildren code={}",code);
         if(code == null || code.equals("null") || code.trim().length() == 0){
