@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.bh</groupId>
+	<groupId>com.exec8</groupId>
 	<artifactId>cascader</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>pom</packaging>
-
+	<name>address cascader</name>
+	<description>城市联动数据</description>
+	<url>https://github.com/jessonxiang/cascader</url>
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
 	<modules>
     	<module>com.bh.cascader.address</module>
+    	<module>com.bh.core.tools</module>
   	</modules>
+
+	<!--<distributionManagement>-->
+		<!--&lt;!&ndash;<repository>&ndash;&gt;-->
+			<!--&lt;!&ndash;<id>nexus-snapshots</id>&ndash;&gt;-->
+			<!--&lt;!&ndash;<url>http://nexus.blackhillstech.com.cn/nexus/content/repositories/releases</url>&ndash;&gt;-->
+		<!--&lt;!&ndash;</repository>&ndash;&gt;-->
+		<!--<repository>-->
+			<!--<id>sonatype-nexus-snapshots</id>-->
+			<!--<url>https://oss.sonatype.org/content/repositories/snapshots/</url>-->
+		<!--</repository>-->
+	<!--</distributionManagement>-->
 </project>
