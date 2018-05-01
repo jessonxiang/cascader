@@ -7,12 +7,20 @@ code 为null 查询全国省份数据<br>
 数据库<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数据库文件为mysql 数据库文件 数据更新时间  2018-04-04
 
-maven 使用 方式
+maven 使用方式
 
-<pre>
+```
+级联选择
 <dependency>
     <groupId>com.exec8</groupId>
     <artifactId>com-bh-cascader-address</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
-</pre>
+工具类
+<dependency>
+    <groupId>com.exec8</groupId>
+    <artifactId>com.bh.core.tools</artifactId>
+    <version>1.0.1</version>
+</dependency>
+
+```
