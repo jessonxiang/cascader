@@ -6,3 +6,13 @@ code 为null 查询全国省份数据<br>
 查询湖南省下的所有地址市<br>
 数据库<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数据库文件为mysql 数据库文件 数据更新时间  2018-04-04
+
+maven 使用 方式
+
+<pre>
+<dependency>
+    <groupId>com.exec8</groupId>
+    <artifactId>com-bh-cascader-address</artifactId>
+    <version>1.0.0</version>
+</dependency>
+</pre>
