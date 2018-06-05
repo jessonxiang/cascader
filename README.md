@@ -23,13 +23,13 @@ maven 使用方式
 <dependency>
     <groupId>com.exec8</groupId>
     <artifactId>com-bh-cascader-address</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 </dependency>
 工具类
 <dependency>
     <groupId>com.exec8</groupId>
     <artifactId>com.bh.core.tools</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 </dependency>
 
 ```
