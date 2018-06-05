@@ -1,6 +1,8 @@
 package com.bh.cascader.core.address.dao.server.impl;
 
 import com.bh.cascader.core.address.dao.dao.StreetDAO;
+import com.bh.cascader.core.address.dao.domain.CityDO;
+import com.bh.cascader.core.address.dao.domain.ProvinceDO;
 import com.bh.cascader.core.address.dao.domain.StreetDO;
 import com.bh.cascader.core.address.dao.server.StreetService;
 import lombok.extern.slf4j.Slf4j;
@@ -26,5 +28,13 @@ public class StreetServiceImpl implements StreetService {
         example.createCriteria().andEqualTo("areaCode",code);
         List<StreetDO> list = streetDAO.selectByExample(example);
         return list;
+    }
+
+    @Override
+    public StreetDO findVOByCode(String code) {
+        Example example = new Example(CityDO.class);
+        example.createCriteria().andEqualTo("code", code);
+        List<StreetDO> list = streetDAO.selectByExample(example);
+        return list.isEmpty() ? null : list.get(0);
     }
 }

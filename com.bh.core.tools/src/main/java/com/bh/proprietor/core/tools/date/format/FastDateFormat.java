@@ -112,7 +112,7 @@ public class FastDateFormat extends Format implements DateParser, DatePrinter {
 	 *
 	 * @param style date style: FULL, LONG, MEDIUM, or SHORT
 	 * @return 本地化 {@link FastDateFormat}
-	 * @throws IllegalArgumentException
+	 * @throws IllegalArgumentException 日期格式问题
 	 */
 	public static FastDateFormat getDateInstance(final int style) {
 		return cache.getDateInstance(style, null, null);
@@ -124,7 +124,7 @@ public class FastDateFormat extends Format implements DateParser, DatePrinter {
 	 * @param style date style: FULL, LONG, MEDIUM, or SHORT
 	 * @param locale {@link Locale} 日期地理位置
 	 * @return 本地化 {@link FastDateFormat}
-	 * @throws IllegalArgumentException
+	 * @throws IllegalArgumentException 日期格式问题
 	 */
 	public static FastDateFormat getDateInstance(final int style, final Locale locale) {
 		return cache.getDateInstance(style, null, locale);
@@ -136,7 +136,7 @@ public class FastDateFormat extends Format implements DateParser, DatePrinter {
 	 * @param style date style: FULL, LONG, MEDIUM, or SHORT
 	 * @param 时区{@link TimeZone}
 	 * @return 本地化 {@link FastDateFormat}
-	 * @throws IllegalArgumentException
+	 * @throws IllegalArgumentException 日期格式问题
 	 */
 	public static FastDateFormat getDateInstance(final int style, final TimeZone timeZone) {
 		return cache.getDateInstance(style, timeZone, null);
@@ -149,7 +149,7 @@ public class FastDateFormat extends Format implements DateParser, DatePrinter {
 	 * @param timeZone 时区{@link TimeZone}
 	 * @param locale {@link Locale} 日期地理位置
 	 * @return 本地化 {@link FastDateFormat}
-	 * @throws IllegalArgumentException
+	 * @throws IllegalArgumentException 日期格式问题
 	 */
 	public static FastDateFormat getDateInstance(final int style, final TimeZone timeZone, final Locale locale) {
 		return cache.getDateInstance(style, timeZone, locale);
@@ -161,7 +161,7 @@ public class FastDateFormat extends Format implements DateParser, DatePrinter {
 	 *
 	 * @param style time style: FULL, LONG, MEDIUM, or SHORT
 	 * @return 本地化 {@link FastDateFormat}
-	 * @throws IllegalArgumentException
+	 * @throws IllegalArgumentException 日期格式问题
 	 */
 	public static FastDateFormat getTimeInstance(final int style) {
 		return cache.getTimeInstance(style, null, null);
@@ -185,7 +185,7 @@ public class FastDateFormat extends Format implements DateParser, DatePrinter {
 	 * @param style time style: FULL, LONG, MEDIUM, or SHORT
 	 * @param timeZone optional time zone, overrides time zone of formatted time
 	 * @return 本地化 {@link FastDateFormat}
-	 * @throws IllegalArgumentException
+	 * @throws IllegalArgumentException 日期格式问题
 	 */
 	public static FastDateFormat getTimeInstance(final int style, final TimeZone timeZone) {
 		return cache.getTimeInstance(style, timeZone, null);
@@ -198,7 +198,7 @@ public class FastDateFormat extends Format implements DateParser, DatePrinter {
 	 * @param timeZone optional time zone, overrides time zone of formatted time
 	 * @param locale {@link Locale} 日期地理位置
 	 * @return 本地化 {@link FastDateFormat}
-	 * @throws IllegalArgumentException
+	 * @throws IllegalArgumentException 日期格式问题
 	 */
 	public static FastDateFormat getTimeInstance(final int style, final TimeZone timeZone, final Locale locale) {
 		return cache.getTimeInstance(style, timeZone, locale);
@@ -211,7 +211,7 @@ public class FastDateFormat extends Format implements DateParser, DatePrinter {
 	 * @param dateStyle date style: FULL, LONG, MEDIUM, or SHORT
 	 * @param timeStyle time style: FULL, LONG, MEDIUM, or SHORT
 	 * @return 本地化 {@link FastDateFormat}
-	 * @throws IllegalArgumentException
+	 * @throws IllegalArgumentException 日期格式问题
 	 * @since 2.1
 	 */
 	public static FastDateFormat getDateTimeInstance(final int dateStyle, final int timeStyle) {
@@ -225,7 +225,7 @@ public class FastDateFormat extends Format implements DateParser, DatePrinter {
 	 * @param timeStyle time style: FULL, LONG, MEDIUM, or SHORT
 	 * @param locale {@link Locale} 日期地理位置
 	 * @return 本地化 {@link FastDateFormat}
-	 * @throws IllegalArgumentException
+	 * @throws IllegalArgumentException 日期格式问题
 	 * @since 2.1
 	 */
 	public static FastDateFormat getDateTimeInstance(final int dateStyle, final int timeStyle, final Locale locale) {
@@ -239,7 +239,7 @@ public class FastDateFormat extends Format implements DateParser, DatePrinter {
 	 * @param timeStyle time style: FULL, LONG, MEDIUM, or SHORT
 	 * @param timeZone 时区{@link TimeZone}
 	 * @return 本地化 {@link FastDateFormat}
-	 * @throws IllegalArgumentException
+	 * @throws IllegalArgumentException 日期格式问题
 	 * @since 2.1
 	 */
 	public static FastDateFormat getDateTimeInstance(final int dateStyle, final int timeStyle, final TimeZone timeZone) {
@@ -254,7 +254,7 @@ public class FastDateFormat extends Format implements DateParser, DatePrinter {
 	 * @param timeZone 时区{@link TimeZone}
 	 * @param locale {@link Locale} 日期地理位置
 	 * @return 本地化 {@link FastDateFormat}
-	 * @throws IllegalArgumentException
+	 * @throws IllegalArgumentException 日期格式问题
 	 */
 	public static FastDateFormat getDateTimeInstance(final int dateStyle, final int timeStyle, final TimeZone timeZone, final Locale locale) {
 		return cache.getDateTimeInstance(dateStyle, timeStyle, timeZone, locale);

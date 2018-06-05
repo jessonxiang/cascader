@@ -15,4 +15,7 @@ public interface BaseService<T> {
      */
     @Cacheable(value="address")
     public List<T> findByCode(String code);
+
+    @Cacheable(value="addressVO")
+    public T findVOByCode(String code);
 }

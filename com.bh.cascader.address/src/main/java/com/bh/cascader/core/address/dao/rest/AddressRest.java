@@ -1,5 +1,6 @@
 package com.bh.cascader.core.address.dao.rest;
 
+import com.bh.cascader.core.address.dao.domain.BaseDO;
 import com.bh.cascader.core.address.dao.domain.ProvinceDO;
 import com.bh.cascader.core.address.dao.server.*;
 import lombok.extern.slf4j.Slf4j;
@@ -36,6 +37,11 @@ public class AddressRest {
     @Resource(name="villageServiceImpl")
     private VillageService villageService;
 
+    /**
+     * 根据code 查询对应下级城市
+     * @param code
+     * @return
+     */
     @GetMapping("/getData/{code}")
     public List getAllChildren(@PathVariable("code") String code){
 //        log.info("AddressRest > getAllChildren code={}",code);
@@ -48,6 +54,32 @@ public class AddressRest {
                 return new ArrayList();
             }
             List list = baseService.findByCode(code);
+            return list;
+        }
+    }
+
+
+    /**
+     * 根据code 查询对应下级城市，不返回下级节点
+     * @param code
+     * @return
+     */
+    @GetMapping("/getDataNoNext/{code}")
+    public List getAllChildrenNoNextChildren(@PathVariable("code") String code){
+//        log.info("AddressRest > getAllChildren code={}",code);
+        if(code == null || code.equals("null") || code.trim().length() == 0){
+            List<ProvinceDO> list = provinceService.findAll();
+            return list;
+        }else{
+            BaseService baseService = getBaseService(code);
+            if(baseService == null){
+                return new ArrayList();
+            }
+            List list = baseService.findByCode(code);
+            for (Object vo : list) {
+                BaseDO baseDO = (BaseDO) vo;
+                baseDO.setCities(null);
+            }
             return list;
         }
     }

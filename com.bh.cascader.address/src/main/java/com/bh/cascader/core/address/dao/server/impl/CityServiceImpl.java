@@ -27,4 +27,11 @@ public class CityServiceImpl implements CityService {
         return list;
     }
 
+    @Override
+    public CityDO findVOByCode(String code) {
+        Example example = new Example(CityDO.class);
+        example.createCriteria().andEqualTo("code",code);
+        List<CityDO> list = cityDAO.selectByExample(example);
+        return list.isEmpty() ? null:list.get(0);
+    }
 }
