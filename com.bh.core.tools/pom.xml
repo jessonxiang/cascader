@@ -4,12 +4,12 @@
 	<parent>
 		<groupId>com.exec8</groupId>
 		<artifactId>cascader</artifactId>
-		<version>1.0.1</version>
+		<version>1.0.2</version>
 	</parent>
 	<name>bh tools</name>
 	<description>工具类</description>
 	<artifactId>com.bh.core.tools</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<packaging>jar</packaging>
 	<properties>
 		<okhttp3.version>3.4.1</okhttp3.version>
