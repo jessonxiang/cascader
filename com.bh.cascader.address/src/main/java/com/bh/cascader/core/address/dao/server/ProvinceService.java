@@ -13,5 +13,5 @@ public interface ProvinceService {
     @Cacheable(value="address")
     public List<ProvinceDO> findAll();
 
-    public ProvinceDO findByCode(String code);
+    public ProvinceDO findVOByCode(String code);
 }
