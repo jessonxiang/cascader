@@ -26,7 +26,7 @@ public class BaseDO implements Serializable{
     private String label;
 
     @Transient
-    private List<Object> cities =new ArrayList<>();
+    private List<Object> cities = null;
 
     public String getValue() {
         return value;
