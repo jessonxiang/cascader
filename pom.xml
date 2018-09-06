@@ -16,7 +16,8 @@
 	<modules>
     	<module>com.bh.cascader.address</module>
     	<module>com.bh.core.tools</module>
-  	</modules>
+        <module>com.xianghy.itextpdf</module>
+    </modules>
 
 	<!--<distributionManagement>-->
 		<!--&lt;!&ndash;<repository>&ndash;&gt;-->
