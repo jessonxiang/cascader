@@ -6,10 +6,10 @@ import com.itextpdf.text.Element;
 import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfContentByte;
 import com.itextpdf.text.pdf.PdfWriter;
+import com.xianghy.itextpdf.tools.base.TPoint;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
-import pdf.base.TPoint;
 
 import java.text.DecimalFormat;
 
