@@ -6,11 +6,11 @@ import com.itextpdf.text.Document;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfWriter;
+import com.xianghy.itextpdf.tools.chart.HistogramCurveExtremumChart;
+import com.xianghy.itextpdf.tools.chart.HistogramGradeDistributionChart;
+import com.xianghy.itextpdf.tools.chart.LineMulCurveLineAreaTableChart;
+import com.xianghy.itextpdf.tools.chart.TableDashTableRectChart;
 import org.junit.Test;
-import pdf.chart.HistogramCurveExtremumChart;
-import pdf.chart.HistogramGradeDistributionChart;
-import pdf.chart.LineMulCurveLineAreaTableChart;
-import pdf.chart.TableDashTableRectChart;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -100,90 +100,90 @@ public class TestChart2 {
 		doc.close();
 	}
 	
-	@Test
-	public void testPolyLineChart() throws Exception {
-		doc.open();
-		// 批次数据
-		final List<Float[]> dataList = new ArrayList<Float[]>();
-		// 添加测试数据
-		Float[] batchData = new Float[] { 3.5f, 5.6f, 2.7f };
-		dataList.add(batchData);
-		batchData = new Float[] { 5.6f, 4.5f, 3.2f };
-		dataList.add(batchData);
-		batchData = new Float[] { 6.6f, 3.2f, 6.4f };
-		dataList.add(batchData);
-		batchData = new Float[] { 4.6f, 3.2f, 4.3f };
-		dataList.add(batchData);
-//		batchData = new Float[] { 5.3f, 1.7f, 6.6f };
+//	@Test
+//	public void testPolyLineChart() throws Exception {
+//		doc.open();
+//		// 批次数据
+//		final List<Float[]> dataList = new ArrayList<Float[]>();
+//		// 添加测试数据
+//		Float[] batchData = new Float[] { 3.5f, 5.6f, 2.7f };
 //		dataList.add(batchData);
-		// 指标颜色
-		final Integer[] normColor = new Integer[] { 0x59cfff, 0xa9d961, 0xffce54 };
-		// 指标背景色
-		final Integer[] normBGColor = new Integer[] { 0xdef5ff, 0xeef7df, 0xfff5dd };
-		// 批次颜色
-		final Integer[] batchColor = new Integer[] { 0x9792dd, 0xffce54, 0x72ccad, 0xe57d54, 0x89cfff };
-		// y轴最大值
-		final Float maxValue = 9f;
-		// y轴分多少档
-		final Integer rownum = 9;
-		int templateWidth =500;
-		// 画板高
-		int templateHeight =200;
-		// 距页面顶部距离
-		final int yOffset =150;
-		// 距页面左侧距离
-		final int xOffset =50;
-		// 表格表头宽
-		final int tableTitleWidth =30;
-		// 表格行高
-		final int tableRowHeight =25;
-
-		// 图形上留白
-		final int before =5;
-		// 图形格宽
-		final int chartColWidth = (templateWidth - tableTitleWidth) / normBGColor.length;
-		// 模板宽
-		templateWidth =470;
-		// 图形行高
-		final int chartRowHeight = (templateHeight - before) / (rownum);
-		// 图形高
-		final int chartHeight = chartRowHeight * rownum;
-		// 模板高
-		templateHeight = chartHeight + before;
-
-		/**
-		 * ,
-				dataList, maxValue, rownum, normBGColor, 
-				batchColor, templateWidth, templateHeight, yOffset, xOffset, tableTitleWidth, before, 30
-		 */
-		
-		pdf.chart.PolyLineChart chart=new pdf.chart.PolyLineChart(writer, writer.getDirectContent(), doc, bfChinese);
-		chart.setBatchColor(batchColor)
-		.setBefore(before)
-		.setDataList(dataList)
-		.setMaxValue(maxValue)
-		.setRownum(rownum)
-		.setNormBGColor(normBGColor)
-		.setTemplateWidth(templateWidth)
-		.setTemplateHeight(templateHeight)
-		.setyOffset(yOffset)
-		.setxOffset(xOffset)
-		.setDataColNames(new String[]{"安慰费安慰费安慰安慰费安慰费安慰费费安慰费","哇嘎","爱国和我"})
-		.setDataColColors(new int[] { 0x59CFFF, 0xA9D961, 0xFFCE54})
-		.setDataRowNames( new String[] { "第一批次", "第二批次", "第三批次","第四批次","第五批次" })
-//		.setLeftBlank(29)
-		.setTableTitleWidth(tableTitleWidth)		
-		.setScoreDescWidth(60)
-		;
-		
-		chart.chart();
-		 
-		 writer.getDirectContent().setColorStroke(BaseColor.BLACK);
-		  
-		 float y1 =chart.getPositionY();
-		 chart.moveLine(writer.getDirectContent(), 0, y1, doc.getPageSize().getWidth(), y1);	
-		doc.close();
-	}
+//		batchData = new Float[] { 5.6f, 4.5f, 3.2f };
+//		dataList.add(batchData);
+//		batchData = new Float[] { 6.6f, 3.2f, 6.4f };
+//		dataList.add(batchData);
+//		batchData = new Float[] { 4.6f, 3.2f, 4.3f };
+//		dataList.add(batchData);
+////		batchData = new Float[] { 5.3f, 1.7f, 6.6f };
+////		dataList.add(batchData);
+//		// 指标颜色
+//		final Integer[] normColor = new Integer[] { 0x59cfff, 0xa9d961, 0xffce54 };
+//		// 指标背景色
+//		final Integer[] normBGColor = new Integer[] { 0xdef5ff, 0xeef7df, 0xfff5dd };
+//		// 批次颜色
+//		final Integer[] batchColor = new Integer[] { 0x9792dd, 0xffce54, 0x72ccad, 0xe57d54, 0x89cfff };
+//		// y轴最大值
+//		final Float maxValue = 9f;
+//		// y轴分多少档
+//		final Integer rownum = 9;
+//		int templateWidth =500;
+//		// 画板高
+//		int templateHeight =200;
+//		// 距页面顶部距离
+//		final int yOffset =150;
+//		// 距页面左侧距离
+//		final int xOffset =50;
+//		// 表格表头宽
+//		final int tableTitleWidth =30;
+//		// 表格行高
+//		final int tableRowHeight =25;
+//
+//		// 图形上留白
+//		final int before =5;
+//		// 图形格宽
+//		final int chartColWidth = (templateWidth - tableTitleWidth) / normBGColor.length;
+//		// 模板宽
+//		templateWidth =470;
+//		// 图形行高
+//		final int chartRowHeight = (templateHeight - before) / (rownum);
+//		// 图形高
+//		final int chartHeight = chartRowHeight * rownum;
+//		// 模板高
+//		templateHeight = chartHeight + before;
+//
+//		/**
+//		 * ,
+//				dataList, maxValue, rownum, normBGColor,
+//				batchColor, templateWidth, templateHeight, yOffset, xOffset, tableTitleWidth, before, 30
+//		 */
+//
+//		pdf.chart.PolyLineChart chart=new pdf.chart.PolyLineChart(writer, writer.getDirectContent(), doc, bfChinese);
+//		chart.setBatchColor(batchColor)
+//		.setBefore(before)
+//		.setDataList(dataList)
+//		.setMaxValue(maxValue)
+//		.setRownum(rownum)
+//		.setNormBGColor(normBGColor)
+//		.setTemplateWidth(templateWidth)
+//		.setTemplateHeight(templateHeight)
+//		.setyOffset(yOffset)
+//		.setxOffset(xOffset)
+//		.setDataColNames(new String[]{"安慰费安慰费安慰安慰费安慰费安慰费费安慰费","哇嘎","爱国和我"})
+//		.setDataColColors(new int[] { 0x59CFFF, 0xA9D961, 0xFFCE54})
+//		.setDataRowNames( new String[] { "第一批次", "第二批次", "第三批次","第四批次","第五批次" })
+////		.setLeftBlank(29)
+//		.setTableTitleWidth(tableTitleWidth)
+//		.setScoreDescWidth(60)
+//		;
+//
+//		chart.chart();
+//
+//		 writer.getDirectContent().setColorStroke(BaseColor.BLACK);
+//
+//		 float y1 =chart.getPositionY();
+//		 chart.moveLine(writer.getDirectContent(), 0, y1, doc.getPageSize().getWidth(), y1);
+//		doc.close();
+//	}
 	
 	@Test
 	public void testLineMulCurveLineAreaTableChart() throws Exception {

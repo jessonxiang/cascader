@@ -4,9 +4,9 @@ import base.TestBaseChart;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfWriter;
+import com.xianghy.itextpdf.tools.base.text.DiamondBeforeParagraph;
+import com.xianghy.itextpdf.tools.chart.*;
 import org.junit.Test;
-import pdf.base.text.DiamondBeforeParagraph;
-import pdf.chart.*;
 
 import java.io.File;
 import java.io.FileOutputStream;

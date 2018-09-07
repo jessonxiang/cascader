@@ -6,9 +6,9 @@ import com.itextpdf.text.Element;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfWriter;
+import com.xianghy.itextpdf.tools.table.TableCommonTable;
+import com.xianghy.itextpdf.tools.table.TableLikeSevenAndAlternateLine;
 import org.junit.Test;
-import pdf.table.TableCommonTable;
-import pdf.table.TableLikeSevenAndAlternateLine;
 
 import java.io.File;
 import java.io.FileOutputStream;
