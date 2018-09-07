@@ -10,7 +10,7 @@
 	<description>城市联动数据</description>
 	<url>https://github.com/jessonxiang/cascader</url>
 	<artifactId>com-bh-cascader-address</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<packaging>jar</packaging>
 
 	<licenses>
