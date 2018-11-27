@@ -30,8 +30,8 @@ public class VillageServiceImpl implements VillageService {
 
     @Override
     public VillageDO findVOByCode(String code) {
-        Example example = new Example(CityDO.class);
-        example.createCriteria().andEqualTo("code", code);
+        Example example = new Example(VillageDO.class);
+        example.createCriteria().andEqualTo("value", code);
         List<VillageDO> list = villageDAO.selectByExample(example);
         return list.isEmpty() ? null : list.get(0);
     }

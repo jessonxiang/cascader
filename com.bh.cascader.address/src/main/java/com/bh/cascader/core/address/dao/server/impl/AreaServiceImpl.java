@@ -30,7 +30,7 @@ public class AreaServiceImpl implements AreaService {
     @Override
     public AreaDO findVOByCode(String code) {
         Example example = new Example(AreaDO.class);
-        example.createCriteria().andEqualTo("code",code);
+        example.createCriteria().andEqualTo("value",code);
         List<AreaDO> list = areaDAO.selectByExample(example);
         return list.isEmpty() ? null:list.get(0);
     }

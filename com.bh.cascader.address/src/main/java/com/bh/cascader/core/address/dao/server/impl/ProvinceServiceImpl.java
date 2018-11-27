@@ -29,8 +29,8 @@ public class ProvinceServiceImpl implements ProvinceService {
 
     @Override
     public ProvinceDO findVOByCode(String code) {
-        Example example = new Example(CityDO.class);
-        example.createCriteria().andEqualTo("code", code);
+        Example example = new Example(ProvinceDO.class);
+        example.createCriteria().andEqualTo("value", code);
         List<ProvinceDO> list = provinceDAO.selectByExample(example);
         return list.isEmpty() ? null : list.get(0);
     }
