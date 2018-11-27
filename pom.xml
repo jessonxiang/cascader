@@ -3,11 +3,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.exec8</groupId>
 	<artifactId>cascader</artifactId>
-	<version>1.0.2</version>
+	<version>${cascader.version}</version>
 	<packaging>pom</packaging>
 	<name>address cascader</name>
 	<description>城市联动数据</description>
 	<url>https://github.com/jessonxiang/cascader</url>
+	<properties>
+		<cascader.version>1.0.4</cascader.version>
+	</properties>
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
 		<artifactId>oss-parent</artifactId>

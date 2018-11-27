@@ -4,13 +4,13 @@
 	<parent>
 		<groupId>com.exec8</groupId>
 		<artifactId>cascader</artifactId>
-		<version>1.0.2</version>
+		<version>${cascader.version}</version>
 	</parent>
 	<name>address cascader</name>
 	<description>城市联动数据</description>
 	<url>https://github.com/jessonxiang/cascader</url>
 	<artifactId>com-bh-cascader-address</artifactId>
-	<version>1.0.3</version>
+	<version>${cascader.version}</version>
 	<packaging>jar</packaging>
 
 	<licenses>

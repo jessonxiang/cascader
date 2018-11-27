@@ -5,14 +5,14 @@
     <parent>
         <artifactId>cascader</artifactId>
         <groupId>com.exec8</groupId>
-        <version>1.0.2</version>
+        <version>${cascader.version}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>com.xianghy.itextpdf</artifactId>
     <name>pdf 画图工具类</name>
     <description>工具类</description>
-    <version>1.0.2</version>
+    <version>${cascader.version}</version>
     <packaging>jar</packaging>
     <properties>
         <itextpdf.version>3.16</itextpdf.version>
