@@ -5,6 +5,6 @@ import com.bh.cascader.core.address.dao.domain.VillageDO;
 /**
  * Created by xianghengyang on 2018/4/4 0004.
  */
-public interface VillageService extends BaseService<VillageDO>{
+public interface VillageService extends BaseService<VillageDO> {
 
 }

@@ -10,6 +10,6 @@ import javax.persistence.Table;
  */
 @Setter
 @Getter
-@Table(name="t_bh_province")
+@Table(name = "t_bh_province")
 public class ProvinceDO extends BaseDO {
 }

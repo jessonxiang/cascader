@@ -20,165 +20,161 @@ import com.bh.proprietor.core.tools.util.StrUtil;
  * <li><code>java.math.BigDecimal</code></li>
  * <li><code>java.math.BigInteger</code></li>
  * </ul>
- * 
- * @author Looly
  *
+ * @author Looly
  */
 public class NumberConverter extends AbstractConverter<Number> {
 
-	private Class<? extends Number> targetType;
+    private Class<? extends Number> targetType;
 
-	public NumberConverter() {
-		this.targetType = Number.class;
-	}
+    public NumberConverter() {
+        this.targetType = Number.class;
+    }
 
-	/**
-	 * 构造<br>
-	 * 
-	 * @param clazz
-	 *            需要转换的数字类型，默认 {@link Number}
-	 */
-	public NumberConverter(Class<? extends Number> clazz) {
-		this.targetType = (null == clazz) ? Number.class : clazz;
-	}
+    /**
+     * 构造<br>
+     *
+     * @param clazz 需要转换的数字类型，默认 {@link Number}
+     */
+    public NumberConverter(Class<? extends Number> clazz) {
+        this.targetType = (null == clazz) ? Number.class : clazz;
+    }
 
-	@Override
-	protected Number convertInternal(Object value) {
-		try {
-			if (Byte.class == this.targetType) {
-				if (value instanceof Number) {
-					return Byte.valueOf(((Number) value).byteValue());
-				}
-				final String valueStr = convertToStr(value);
-				if (StrUtil.isBlank(valueStr)) {
-					return null;
-				}
-				return Byte.valueOf(valueStr);
+    @Override
+    protected Number convertInternal(Object value) {
+        try {
+            if (Byte.class == this.targetType) {
+                if (value instanceof Number) {
+                    return Byte.valueOf(((Number) value).byteValue());
+                }
+                final String valueStr = convertToStr(value);
+                if (StrUtil.isBlank(valueStr)) {
+                    return null;
+                }
+                return Byte.valueOf(valueStr);
 
-			} else if (Short.class == this.targetType) {
-				if (value instanceof Number) {
-					return Short.valueOf(((Number) value).shortValue());
-				}
-				final String valueStr = convertToStr(value);
-				if (StrUtil.isBlank(valueStr)) {
-					return null;
-				}
-				return Short.valueOf(valueStr);
+            } else if (Short.class == this.targetType) {
+                if (value instanceof Number) {
+                    return Short.valueOf(((Number) value).shortValue());
+                }
+                final String valueStr = convertToStr(value);
+                if (StrUtil.isBlank(valueStr)) {
+                    return null;
+                }
+                return Short.valueOf(valueStr);
 
-			} else if (Integer.class == this.targetType) {
-				if (value instanceof Number) {
-					return Integer.valueOf(((Number) value).intValue());
-				}
-				final String valueStr = convertToStr(value);
-				if (StrUtil.isBlank(valueStr)) {
-					return null;
-				}
-				return Integer.valueOf(valueStr);
+            } else if (Integer.class == this.targetType) {
+                if (value instanceof Number) {
+                    return Integer.valueOf(((Number) value).intValue());
+                }
+                final String valueStr = convertToStr(value);
+                if (StrUtil.isBlank(valueStr)) {
+                    return null;
+                }
+                return Integer.valueOf(valueStr);
 
-			} else if (Long.class == this.targetType) {
-				if (value instanceof Number) {
-					return Long.valueOf(((Number) value).longValue());
-				}
-				final String valueStr = convertToStr(value);
-				if (StrUtil.isBlank(valueStr)) {
-					return null;
-				}
-				return Long.valueOf(valueStr);
+            } else if (Long.class == this.targetType) {
+                if (value instanceof Number) {
+                    return Long.valueOf(((Number) value).longValue());
+                }
+                final String valueStr = convertToStr(value);
+                if (StrUtil.isBlank(valueStr)) {
+                    return null;
+                }
+                return Long.valueOf(valueStr);
 
-			} else if (Float.class == this.targetType) {
-				if (value instanceof Number) {
-					return Float.valueOf(((Number) value).floatValue());
-				}
-				final String valueStr = convertToStr(value);
-				if (StrUtil.isBlank(valueStr)) {
-					return null;
-				}
-				return Float.valueOf(valueStr);
+            } else if (Float.class == this.targetType) {
+                if (value instanceof Number) {
+                    return Float.valueOf(((Number) value).floatValue());
+                }
+                final String valueStr = convertToStr(value);
+                if (StrUtil.isBlank(valueStr)) {
+                    return null;
+                }
+                return Float.valueOf(valueStr);
 
-			} else if (Double.class == this.targetType) {
-				if (value instanceof Number) {
-					return Double.valueOf(((Number) value).doubleValue());
-				}
-				final String valueStr = convertToStr(value);
-				if (StrUtil.isBlank(valueStr)) {
-					return null;
-				}
-				return Double.valueOf(valueStr);
+            } else if (Double.class == this.targetType) {
+                if (value instanceof Number) {
+                    return Double.valueOf(((Number) value).doubleValue());
+                }
+                final String valueStr = convertToStr(value);
+                if (StrUtil.isBlank(valueStr)) {
+                    return null;
+                }
+                return Double.valueOf(valueStr);
 
-			} else if (BigDecimal.class == this.targetType) {
-				return toBigDecimal(value);
+            } else if (BigDecimal.class == this.targetType) {
+                return toBigDecimal(value);
 
-			} else if (BigInteger.class == this.targetType) {
-				toBigInteger(value);
-			}
+            } else if (BigInteger.class == this.targetType) {
+                toBigInteger(value);
+            }
 
-			final String valueStr = convertToStr(value);
-			if (StrUtil.isBlank(valueStr)) {
-				return null;
-			}
-			return NumberFormat.getInstance().parse(valueStr);
-		} catch (Exception e) {
-			// Ignore Exception
-		}
-		return null;
-	}
+            final String valueStr = convertToStr(value);
+            if (StrUtil.isBlank(valueStr)) {
+                return null;
+            }
+            return NumberFormat.getInstance().parse(valueStr);
+        } catch (Exception e) {
+            // Ignore Exception
+        }
+        return null;
+    }
 
-	/**
-	 * 转换为BigDecimal<br>
-	 * 如果给定的值为空，或者转换失败，返回默认值<br>
-	 * 转换失败不会报错
-	 * 
-	 * @param value
-	 *            被转换的值
-	 * @return 结果
-	 */
-	private BigDecimal toBigDecimal(Object value) {
-		if (value instanceof Long) {
-			return new BigDecimal((Long) value);
-		} else if (value instanceof Double) {
-			return new BigDecimal((Double) value);
-		} else if (value instanceof Integer) {
-			return new BigDecimal((Integer) value);
-		} else if (value instanceof BigInteger) {
-			return new BigDecimal((BigInteger) value);
-		}
+    /**
+     * 转换为BigDecimal<br>
+     * 如果给定的值为空，或者转换失败，返回默认值<br>
+     * 转换失败不会报错
+     *
+     * @param value 被转换的值
+     * @return 结果
+     */
+    private BigDecimal toBigDecimal(Object value) {
+        if (value instanceof Long) {
+            return new BigDecimal((Long) value);
+        } else if (value instanceof Double) {
+            return new BigDecimal((Double) value);
+        } else if (value instanceof Integer) {
+            return new BigDecimal((Integer) value);
+        } else if (value instanceof BigInteger) {
+            return new BigDecimal((BigInteger) value);
+        }
 
-		final String valueStr = convertToStr(value);
-		if (StrUtil.isBlank(valueStr)) {
-			return null;
-		}
-		return new BigDecimal(valueStr);
-	}
+        final String valueStr = convertToStr(value);
+        if (StrUtil.isBlank(valueStr)) {
+            return null;
+        }
+        return new BigDecimal(valueStr);
+    }
 
-	/**
-	 * 转换为BigInteger<br>
-	 * 如果给定的值为空，或者转换失败，返回默认值<br>
-	 * 转换失败不会报错
-	 * 
-	 * @param value
-	 *            被转换的值
-	 * @return 结果
-	 */
-	private BigInteger toBigInteger(Object value) {
-		if (value instanceof Long) {
-			return BigInteger.valueOf((Long) value);
-		}
-		final String valueStr = convertToStr(value);
-		if (StrUtil.isBlank(valueStr)) {
-			return null;
-		}
-		return new BigInteger(valueStr);
-	}
+    /**
+     * 转换为BigInteger<br>
+     * 如果给定的值为空，或者转换失败，返回默认值<br>
+     * 转换失败不会报错
+     *
+     * @param value 被转换的值
+     * @return 结果
+     */
+    private BigInteger toBigInteger(Object value) {
+        if (value instanceof Long) {
+            return BigInteger.valueOf((Long) value);
+        }
+        final String valueStr = convertToStr(value);
+        if (StrUtil.isBlank(valueStr)) {
+            return null;
+        }
+        return new BigInteger(valueStr);
+    }
 
-	@Override
-	protected String convertToStr(Object value) {
-		final String valueStr = super.convertToStr(value);
-		return (null == valueStr) ? null : valueStr.trim();
-	}
+    @Override
+    protected String convertToStr(Object value) {
+        final String valueStr = super.convertToStr(value);
+        return (null == valueStr) ? null : valueStr.trim();
+    }
 
-	@Override
-	@SuppressWarnings("unchecked")
-	public Class<Number> getTargetType() {
-		return (Class<Number>) this.targetType;
-	}
+    @Override
+    @SuppressWarnings("unchecked")
+    public Class<Number> getTargetType() {
+        return (Class<Number>) this.targetType;
+    }
 }

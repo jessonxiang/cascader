@@ -7,15 +7,14 @@ import com.bh.proprietor.core.tools.util.CharsetUtil;
 
 /**
  * 编码对象转换器
- * 
- * @author Looly
  *
+ * @author Looly
  */
 public class CharsetConverter extends AbstractConverter<Charset> {
 
-	@Override
-	protected Charset convertInternal(Object value) {
-		return CharsetUtil.charset(convertToStr(value));
-	}
+    @Override
+    protected Charset convertInternal(Object value) {
+        return CharsetUtil.charset(convertToStr(value));
+    }
 
 }

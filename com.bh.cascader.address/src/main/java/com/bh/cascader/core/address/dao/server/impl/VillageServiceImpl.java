@@ -20,10 +20,11 @@ import java.util.List;
 public class VillageServiceImpl implements VillageService {
     @Resource
     private VillageDAO villageDAO;
+
     @Override
     public List<VillageDO> findByCode(String code) {
         Example example = new Example(VillageDO.class);
-        example.createCriteria().andEqualTo("streetCode",code);
+        example.createCriteria().andEqualTo("streetCode", code);
         List<VillageDO> list = villageDAO.selectByExample(example);
         return list;
     }

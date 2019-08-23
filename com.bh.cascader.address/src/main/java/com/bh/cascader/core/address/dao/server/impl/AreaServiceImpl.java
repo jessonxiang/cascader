@@ -19,10 +19,11 @@ public class AreaServiceImpl implements AreaService {
 
     @Resource
     private AreaDAO areaDAO;
+
     @Override
     public List<AreaDO> findByCode(String code) {
         Example example = new Example(AreaDO.class);
-        example.createCriteria().andEqualTo("cityCode",code);
+        example.createCriteria().andEqualTo("cityCode", code);
         List<AreaDO> list = areaDAO.selectByExample(example);
         return list;
     }
@@ -30,8 +31,8 @@ public class AreaServiceImpl implements AreaService {
     @Override
     public AreaDO findVOByCode(String code) {
         Example example = new Example(AreaDO.class);
-        example.createCriteria().andEqualTo("value",code);
+        example.createCriteria().andEqualTo("value", code);
         List<AreaDO> list = areaDAO.selectByExample(example);
-        return list.isEmpty() ? null:list.get(0);
+        return list.isEmpty() ? null : list.get(0);
     }
 }

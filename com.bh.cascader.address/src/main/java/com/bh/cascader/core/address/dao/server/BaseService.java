@@ -10,12 +10,13 @@ import java.util.List;
 public interface BaseService<T> {
     /**
      * 根据上一级code查询code对应下的所有子级
+     *
      * @param code
      * @return
      */
-    @Cacheable(value="address")
+    @Cacheable(value = "address")
     public List<T> findByCode(String code);
 
-    @Cacheable(value="addressVO")
+    @Cacheable(value = "addressVO")
     public T findVOByCode(String code);
 }

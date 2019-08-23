@@ -5,6 +5,6 @@ import com.bh.cascader.core.address.dao.domain.AreaDO;
 /**
  * Created by xianghengyang on 2018/4/4 0004.
  */
-public interface AreaService extends BaseService<AreaDO>{
+public interface AreaService extends BaseService<AreaDO> {
 
 }

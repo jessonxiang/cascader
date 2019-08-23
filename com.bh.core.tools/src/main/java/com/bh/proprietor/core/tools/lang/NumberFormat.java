@@ -9,11 +9,12 @@ public class NumberFormat {
 
     /**
      * 四舍五入保留length长度小数
+     *
      * @param number
      * @param length
      * @return
      */
-    public static Double formartDouble(double number, int length){
+    public static Double formartDouble(double number, int length) {
         BigDecimal bigDecimal = new BigDecimal(number);
         BigDecimal bd = bigDecimal.setScale(length, BigDecimal.ROUND_HALF_UP);
         return bd.doubleValue();
@@ -21,11 +22,12 @@ public class NumberFormat {
 
     /**
      * 四舍五入保留length长度小数
+     *
      * @param number
      * @param length
      * @return
      */
-    public static Double formartDouble(String number, int length){
+    public static Double formartDouble(String number, int length) {
         BigDecimal bigDecimal = new BigDecimal(number);
         BigDecimal bd = bigDecimal.setScale(length, BigDecimal.ROUND_HALF_UP);
         return bd.doubleValue();
@@ -33,10 +35,11 @@ public class NumberFormat {
 
     /**
      * 四舍五入保留length长度小数
+     *
      * @param number
      * @return
      */
-    public static Double formartDouble(Double number,int length){
+    public static Double formartDouble(Double number, int length) {
         BigDecimal bigDecimal = new BigDecimal(number);
         BigDecimal bd = bigDecimal.setScale(length, BigDecimal.ROUND_HALF_UP);
         return bd.doubleValue();

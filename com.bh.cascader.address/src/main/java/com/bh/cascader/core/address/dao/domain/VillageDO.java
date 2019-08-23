@@ -11,19 +11,19 @@ import javax.persistence.Table;
  */
 @Getter
 @Setter
-@Table(name="t_bh_village")
-public class VillageDO extends  BaseDO{
+@Table(name = "t_bh_village")
+public class VillageDO extends BaseDO {
 
-    @Column(name="cityCode")
+    @Column(name = "cityCode")
     private String cityCode;
 
-    @Column(name="provinceCode")
+    @Column(name = "provinceCode")
     private String provinceCode;
 
-    @Column(name="areaCode")
+    @Column(name = "areaCode")
     private String areaCode;
 
-    @Column(name="streetCode")
+    @Column(name = "streetCode")
     private String streetCode;
 
 }

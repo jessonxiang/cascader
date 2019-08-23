@@ -9,18 +9,18 @@ import javax.persistence.Table;
 /**
  * Created by xianghengyang on 2018/4/4 0004.
  */
-@Table(name="t_bh_street")
+@Table(name = "t_bh_street")
 @Getter
 @Setter
-public class StreetDO extends BaseDO{
+public class StreetDO extends BaseDO {
 
-    @Column(name="cityCode")
+    @Column(name = "cityCode")
     private String cityCode;
 
-    @Column(name="provinceCode")
+    @Column(name = "provinceCode")
     private String provinceCode;
 
-    @Column(name="areaCode")
+    @Column(name = "areaCode")
     private String areaCode;
 
 }

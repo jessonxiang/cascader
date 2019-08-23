@@ -6,16 +6,15 @@ import com.bh.proprietor.core.tools.convert.Convert;
 
 /**
  * short 类型数组转换器
- * 
- * @author Looly
  *
+ * @author Looly
  */
 public class ShortArrayConverter extends AbstractConverter<short[]> {
 
-	@Override
-	protected short[] convertInternal(Object value) {
-		final Short[] result = Convert.convert(Short[].class, value);
-		return ArrayUtil.unWrap(result);
-	}
+    @Override
+    protected short[] convertInternal(Object value) {
+        final Short[] result = Convert.convert(Short[].class, value);
+        return ArrayUtil.unWrap(result);
+    }
 
 }

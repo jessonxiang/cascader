@@ -8,27 +8,26 @@ import com.bh.proprietor.core.tools.convert.AbstractConverter;
 
 /**
  * 字符串转换器
- * 
- * @author Looly
  *
+ * @author Looly
  */
 public class URLConverter extends AbstractConverter<URL> {
 
-	@Override
-	protected URL convertInternal(Object value) {
-		try {
-			if (value instanceof File) {
-				return ((File) value).toURI().toURL();
-			}
+    @Override
+    protected URL convertInternal(Object value) {
+        try {
+            if (value instanceof File) {
+                return ((File) value).toURI().toURL();
+            }
 
-			if (value instanceof URI) {
-				return ((URI) value).toURL();
-			}
-			return new URL(convertToStr(value));
-		} catch (Exception e) {
-			// Ignore Exception
-		}
-		return null;
-	}
+            if (value instanceof URI) {
+                return ((URI) value).toURL();
+            }
+            return new URL(convertToStr(value));
+        } catch (Exception e) {
+            // Ignore Exception
+        }
+        return null;
+    }
 
 }

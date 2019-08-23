@@ -25,7 +25,7 @@ public class StreetServiceImpl implements StreetService {
     @Override
     public List<StreetDO> findByCode(String code) {
         Example example = new Example(StreetDO.class);
-        example.createCriteria().andEqualTo("areaCode",code);
+        example.createCriteria().andEqualTo("areaCode", code);
         List<StreetDO> list = streetDAO.selectByExample(example);
         return list;
     }

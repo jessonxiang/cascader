@@ -7,56 +7,60 @@ import com.itextpdf.text.pdf.PdfWriter;
 
 /**
  * 所有PDF基本单位图形的超类
+ *
  * @author cheny
  */
 public abstract class AbstractBaseUnitChart {
-	private AbstractBaseChart baseChart;
-	
-	protected PdfWriter writer;
-	protected PdfContentByte contentByte;
-	protected Document document;
-	protected BaseFont baseFont;
-	
-	/**
-	 * 具体画图，需要实现的方法
-	 */
-	public abstract void chart();
+    private AbstractBaseChart baseChart;
 
-	public AbstractBaseUnitChart(AbstractBaseChart baseChart,
-			PdfWriter writer,PdfContentByte contentByte,Document document) {
-		this.baseChart = baseChart;
-		this.writer=writer;
-		this.contentByte=contentByte;
-		this.document=document;
-	}
+    protected PdfWriter writer;
+    protected PdfContentByte contentByte;
+    protected Document document;
+    protected BaseFont baseFont;
 
-	public AbstractBaseUnitChart(PdfWriter writer,PdfContentByte contentByte,Document document) {
-		this.writer=writer;
-		this.contentByte=contentByte;
-		this.document=document;
-	}
-	
-	/**
-	 * 具体的pdf图形的实例
-	 * @param baseChart
-	 */
-	public void setBaseChart(AbstractBaseChart baseChart) {
-		this.baseChart = baseChart;
-	}
+    /**
+     * 具体画图，需要实现的方法
+     */
+    public abstract void chart();
 
-	/**
-	 * 基本的字体，仅仅需要显示文本的时候才必须
-	 * @param baseFont
-	 */
-	public void setBaseFont(BaseFont baseFont) {
-		this.baseFont = baseFont;
-	}
+    public AbstractBaseUnitChart(AbstractBaseChart baseChart,
+                                 PdfWriter writer, PdfContentByte contentByte, Document document) {
+        this.baseChart = baseChart;
+        this.writer = writer;
+        this.contentByte = contentByte;
+        this.document = document;
+    }
 
-	/**
-	 * 具体的pdf图形的实例
-	 * @return AbstractBaseChart
-	 */
-	public AbstractBaseChart getBaseChart() {
-		return baseChart;
-	}
+    public AbstractBaseUnitChart(PdfWriter writer, PdfContentByte contentByte, Document document) {
+        this.writer = writer;
+        this.contentByte = contentByte;
+        this.document = document;
+    }
+
+    /**
+     * 具体的pdf图形的实例
+     *
+     * @param baseChart
+     */
+    public void setBaseChart(AbstractBaseChart baseChart) {
+        this.baseChart = baseChart;
+    }
+
+    /**
+     * 基本的字体，仅仅需要显示文本的时候才必须
+     *
+     * @param baseFont
+     */
+    public void setBaseFont(BaseFont baseFont) {
+        this.baseFont = baseFont;
+    }
+
+    /**
+     * 具体的pdf图形的实例
+     *
+     * @return AbstractBaseChart
+     */
+    public AbstractBaseChart getBaseChart() {
+        return baseChart;
+    }
 }

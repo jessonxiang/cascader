@@ -19,10 +19,11 @@ public class CityServiceImpl implements CityService {
 
     @Resource
     private CityDAO cityDAO;
+
     @Override
     public List<CityDO> findByCode(String code) {
         Example example = new Example(CityDO.class);
-        example.createCriteria().andEqualTo("provinceCode",code);
+        example.createCriteria().andEqualTo("provinceCode", code);
         List<CityDO> list = cityDAO.selectByExample(example);
         return list;
     }
@@ -30,8 +31,8 @@ public class CityServiceImpl implements CityService {
     @Override
     public CityDO findVOByCode(String code) {
         Example example = new Example(CityDO.class);
-        example.createCriteria().andEqualTo("value",code);
+        example.createCriteria().andEqualTo("value", code);
         List<CityDO> list = cityDAO.selectByExample(example);
-        return list.isEmpty() ? null:list.get(0);
+        return list.isEmpty() ? null : list.get(0);
     }
 }

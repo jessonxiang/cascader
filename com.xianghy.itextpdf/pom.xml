@@ -5,20 +5,21 @@
     <parent>
         <artifactId>cascader</artifactId>
         <groupId>com.exec8</groupId>
-        <version>${cascader.version}</version>
+        <version>1.8</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>com.xianghy.itextpdf</artifactId>
     <name>pdf tools</name>
     <description>工具类</description>
-    <version>${cascader.version}</version>
+    <version>1.7</version>
     <packaging>jar</packaging>
     <properties>
         <itextpdf.version>3.16</itextpdf.version>
         <additionalparam>-Xdoclint:none</additionalparam>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/</sonatypeOssDistMgmtSnapshotsUrl>
+        <sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/
+        </sonatypeOssDistMgmtSnapshotsUrl>
     </properties>
 
     <dependencies>

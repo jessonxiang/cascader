@@ -6,16 +6,15 @@ import com.bh.proprietor.core.tools.util.ArrayUtil;
 
 /**
  * int 类型数组转换器
- * 
- * @author Looly
  *
+ * @author Looly
  */
 public class IntArrayConverter extends AbstractConverter<int[]> {
 
-	@Override
-	protected int[] convertInternal(Object value) {
-		final Integer[] result = Convert.convert(Integer[].class, value);
-		return ArrayUtil.unWrap(result);
-	}
+    @Override
+    protected int[] convertInternal(Object value) {
+        final Integer[] result = Convert.convert(Integer[].class, value);
+        return ArrayUtil.unWrap(result);
+    }
 
 }

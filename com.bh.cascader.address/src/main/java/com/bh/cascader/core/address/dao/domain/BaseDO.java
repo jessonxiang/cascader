@@ -16,13 +16,13 @@ import java.util.List;
  */
 @Getter
 @Setter
-public class BaseDO implements Serializable{
+public class BaseDO implements Serializable {
 
     @Id
     @GeneratedValue(generator = "JDBC")
-    @Column(name="code")
+    @Column(name = "code")
     private String value;
-    @Column(name="name")
+    @Column(name = "name")
     private String label;
 
     @Transient

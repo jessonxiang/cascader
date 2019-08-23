@@ -6,15 +6,14 @@ import com.bh.proprietor.core.tools.convert.AbstractConverter;
 
 /**
  * TimeZone转换器
- * 
- * @author Looly
  *
+ * @author Looly
  */
 public class TimeZoneConverter extends AbstractConverter<TimeZone> {
 
-	@Override
-	protected TimeZone convertInternal(Object value) {
-		return TimeZone.getTimeZone(convertToStr(value));
-	}
+    @Override
+    protected TimeZone convertInternal(Object value) {
+        return TimeZone.getTimeZone(convertToStr(value));
+    }
 
 }

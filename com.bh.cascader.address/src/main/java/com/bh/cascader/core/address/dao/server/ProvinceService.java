@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface ProvinceService {
 
-    @Cacheable(value="address")
+    @Cacheable(value = "address")
     public List<ProvinceDO> findAll();
 
     public ProvinceDO findVOByCode(String code);
