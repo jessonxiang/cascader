@@ -23,20 +23,20 @@ maven 使用方式
 <dependency>
     <groupId>com.exec8</groupId>
     <artifactId>com-bh-cascader-address</artifactId>
-    <version>1.0.2</version>
+    <version>1.8</version>
 </dependency>
 工具类
 <dependency>
     <groupId>com.exec8</groupId>
     <artifactId>com.bh.core.tools</artifactId>
-    <version>1.0.2</version>
+    <version>1.8</version>
 </dependency>
 
 阿里云oss spring boot starter包
 <dependency>
     <groupId>com.exec8</groupId>
     <artifactId>ali-oss-spring-boot-starter</artifactId>
-    <version>1.0.2</version>
+    <version>1.8</version>
 </dependency>
 
 ```
