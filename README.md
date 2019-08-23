@@ -32,5 +32,12 @@ maven 使用方式
     <version>1.0.2</version>
 </dependency>
 
+阿里云oss spring boot starter包
+<dependency>
+    <groupId>com.exec8</groupId>
+    <artifactId>ali-oss-spring-boot-starter</artifactId>
+    <version>1.0.2</version>
+</dependency>
+
 ```
 如果需要有别的接口请留言。看到之后更新  
