@@ -14,7 +14,7 @@
         <module>com.bh.core.tools</module>
         <module>com.xianghy.itextpdf</module>
         <module>ali-oss-spring-boot-starter</module>
-        <module>osst-est</module>
+        <module>oss-test</module>
     </modules>
 
     <!--<distributionManagement>-->
