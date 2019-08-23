@@ -1,0 +1,6 @@
+aliyun:
+    oss:
+        bucket: bucket #存储空间
+        endpoint: oss-cn-shenzhen.aliyuncs.com #不带协议值
+        accessKeyId: 您的accessKey
+        accessKeySecret: 您的秘钥
