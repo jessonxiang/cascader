@@ -12,7 +12,7 @@
     <artifactId>com.xianghy.itextpdf</artifactId>
     <name>pdf tools</name>
     <description>工具类</description>
-    <version>1.7</version>
+    <version>1.8</version>
     <packaging>jar</packaging>
     <properties>
         <itextpdf.version>3.16</itextpdf.version>
