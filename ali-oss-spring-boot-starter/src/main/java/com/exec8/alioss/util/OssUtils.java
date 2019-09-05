@@ -123,8 +123,6 @@ public class OssUtils {
             key = key.substring(1);
         }
         ossClient.putObject(bucket, key, file);
-//		 关闭client
-        ossClient.shutdown();
     }
 
     /**
@@ -140,15 +138,11 @@ public class OssUtils {
     public static void downLoadFile(File file, String key, OSSClient ossClient, String bucketName) {
         // 下载object到文件
         ossClient.getObject(new GetObjectRequest(bucketName, key), file);
-        // 关闭client
-        ossClient.shutdown();
     }
 
     public static OSSObject downLoadObject(String key, OSSClient ossClient, String bucketName) {
         // 下载object到文件
         OSSObject object = ossClient.getObject(new GetObjectRequest(bucketName, key));
-        // 关闭client
-        ossClient.shutdown();
         return object;
     }
 
@@ -180,8 +174,6 @@ public class OssUtils {
     public static void uploadFile(File file, String key, OSSClient ossClient, String bucketName) {
         // 上传文件
         ossClient.putObject(bucketName, key, file);
-        // 关闭client
-        ossClient.shutdown();
     }
 
 
@@ -191,8 +183,6 @@ public class OssUtils {
         }
         // 上传文件流
         PutObjectResult putObjectResult = ossClient.putObject(bucketName, key, file);
-        // 关闭client
-        ossClient.shutdown();
         return putObjectResult;
     }
 
