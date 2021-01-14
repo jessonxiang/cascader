@@ -40,7 +40,7 @@
 
     <properties>
         <okhttp3.version>3.4.1</okhttp3.version>
-        <poi.version>3.16</poi.version>
+        <poi.version>4.1.2</poi.version>
         <additionalparam>-Xdoclint:none</additionalparam>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/
